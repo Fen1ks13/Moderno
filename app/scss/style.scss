@@ -319,6 +319,7 @@
     width: 100%;
     padding-top: 90px;
     padding-bottom: 100px;
+    display: none;
 }
 .login__title{
     text-align: center;
@@ -1469,6 +1470,41 @@ button.icon-unsorted{
     display: flex;
     justify-content: space-between;
     padding: 30px 0px;
+    align-items: center;
+    .jq-selectbox__select{
+        height: 32px;
+        padding: 0px 9px 5px 10px;
+        border: 1px solid #d5d5d5;
+        border-bottom-color: none;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #70838d;
+        text-shadow: none;
+        font-size: 13px;
+        width: 85px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
+    .jq-selectbox__trigger-arrow{
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        color: $green;
+        
+        line-height: 30px;
+        &::before{
+            content: "\f0d7";
+            font-family: 'icomoon';
+            font-size: 15px;
+        }
+    }
+    .jq-selectbox__select:hover {
+        background: transparent;
+    }
 }
 .price__product{
     font-size: 22px;
@@ -1841,6 +1877,24 @@ button.icon-unsorted{
     background-color: #fff;
     border: 1px solid #dedede;
     min-height: 100%;
+    .jq-selectbox__select{
+        height: 38px;
+        padding: 0 18px;
+        border: 1px solid #dedede;
+        border-bottom-color: #dedede;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+        width: 100%;
+        width: 540px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;   
+    }
 }
 .page-box__title{
     border-bottom: 1px solid #dedede;
@@ -2067,6 +2121,277 @@ button.icon-unsorted{
         background-repeat: repeat;
     }
 }
-
 //end profile
+
+//start upload
+
+.upload__inner{
+    background-color: #fff;
+    border: 1px solid #dedede;
+    margin-bottom: 110px;
+    button{
+        color: #fff;
+        background-color: $green;
+        border: none;
+        cursor: pointer;
+        padding: 15px 36px;
+        margin-left: 175px;
+    }
+}
+.upload__inner-title{
+    font-size: 24px;
+    color: $bg;
+    @include f500;
+    padding: 16px 35px 18px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 40px;
+}
+.upload__content{
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+}
+.upload-line{
+    margin-bottom: 25px;
+    display: flex;
+    label{
+        min-width: 175px;
+        padding-right: 15px;
+        color: #444;
+        padding-top: 5px;
+        span{
+            color: $green;
+            font-size: 24px;
+        }
+    }
+    select,
+    input,
+    textarea{
+        width: 100%;
+        display: block;
+        border: 1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+        &::placeholder{
+        color: #777;
+        }
+    }
+    input[type="file"]{
+        outline: none;
+    }
+    textarea{
+        height: 150px;
+        padding: 8px 18px;
+        resize: none;
+    }
+    .jq-file {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0 18px;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        margin-left: 100px;
+    }
+    .jq-file__browse {
+        top: 5px;
+        right: auto;
+        padding: 0 12px;
+        left: 9px;
+        border: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 12px;
+        line-height: 26px;
+        color: #444;
+    }
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select{
+        height: 38px;
+        padding: 0 18px;
+        border: 1px solid #dedede;
+        border-bottom-color: #dedede;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;   
+    }
+    .jq-selectbox__trigger-arrow{
+        border: none;
+        top: 0;
+        right: 20px;
+        font-size: 15px;
+        line-height: 40px;
+        color: #444;
+        &::before{
+            content: "\f0d7";
+            font-family: 'icomoon';
+        }
+    }
+    .jq-selectbox__dropdown{
+        top: 35px;
+    }
+}
+//end upload
+//start wthdrawals
+
+.wthdrawals__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.withdrawals__col{
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+}
+.withdrawals__title{
+    color: $bg;
+    font-size: 24px;
+    @include f500;
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+}
+.withdrawals__content{
+    padding-left: 35px;
+    padding-right: 40px;
+    button{
+        background-color: $green;
+        color: #fff;
+        min-width: 200px;
+        padding: 17px 30px;
+        border: none;
+        cursor: pointer;
+        @include f700;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+}
+.withdrawal__form-line{
+    margin-bottom: 25px;
+    label{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        color: $bg;
+        margin-bottom: 15px;
+    }
+    span{
+        color: $green;
+        font-size: 20px;
+    }
+    input,
+    select{
+        width: 100%;
+        display: block;
+        border: 1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+        &::placeholder{
+            color: #777;
+        }
+    }
+       .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select{
+        height: 38px;
+        padding: 0 18px;
+        border: 1px solid #dedede;
+        border-bottom-color: #dedede;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;   
+    }
+    .jq-selectbox__trigger-arrow{
+        border: none;
+        top: 0;
+        right: 20px;
+        font-size: 15px;
+        line-height: 40px;
+        color: #444;
+        &::before{
+            content: "\f0d7";
+            font-family: 'icomoon';
+        }
+    }
+    .jq-selectbox__dropdown{
+        top: 35px;
+    }
+}
+.withdrawals__content-items{
+    padding-bottom: 35px;
+}
+.withdrawals__content-item{
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    &:nth-child(odd){
+        background-color: #f9f9f9;
+    }
+}
+.withdrawals__content-date{
+    @include f500;
+    width: 154px;
+    padding-left: 20px;
+}
+.withdrawals__content-email{
+    @include f500;
+    width: 180px;
+}
+.withdrawals__content-summ{
+    width: 70px;
+    @include f700;
+}
+.withdrawals__content-status{
+    width: 80px;
+    @include f700;
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+}
+.withdrawals__content-pending{
+    @include f700;
+}
+//end wthdrawals
 @import '_media';
