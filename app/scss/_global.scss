@@ -72,6 +72,8 @@ body{
 .breadcrumbs{
     &__inner{
         padding: 43px 0px 40px;
+        overflow: hidden;
+        width: 1200px;
     }
  &__list{
      li{
